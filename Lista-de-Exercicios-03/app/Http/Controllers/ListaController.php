@@ -60,4 +60,30 @@ class ListaController extends Controller
         }
         return $valor1 / $valor2;
     }
+
+    // Exercício 05
+    public function mostrarEx05()
+    {
+        return view("ex05");
+    }
+
+    public function calcularEx05(Request $request)
+    {
+        $nota1 = (float)$request->input('nota01');
+        $nota2 = (float)$request->input('nota02');
+        $nota3 = (float)$request->input('nota03');
+        return ($nota1 + $nota2 + $nota3) / 3;
+    }
+
+    // Exercício 06
+    public function mostrarEx06()
+    {
+        return view("ex06");
+    }
+
+    public function calcularEx06(Request $request)
+    {
+        $celsius = (float)$request->input('celsius');
+        return ($celsius * 9 / 5) + 32;
+    }
 }
