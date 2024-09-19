@@ -8,8 +8,7 @@
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir uma temperatura em Celsius. O
-        programa deve converter essa temperatura para Fahrenheit e exibir o resultado.</p>
+    <p>Crie um formulário que permita ao usuário inserir uma temperatura em Celsius. O programa deve converter essa temperatura para Fahrenheit e exibir o resultado.</p>
 
     <form action="/respostaEx06" method="POST">
         @CSRF

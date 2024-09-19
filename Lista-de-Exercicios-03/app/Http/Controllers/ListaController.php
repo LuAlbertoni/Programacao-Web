@@ -86,4 +86,29 @@ class ListaController extends Controller
         $celsius = (float)$request->input('celsius');
         return ($celsius * 9 / 5) + 32;
     }
+
+    // Exercício 07
+    public function mostrarEx07()
+    {
+        return view("ex07");
+    }
+
+    public function calcularEx07(Request $request)
+    {
+        $fahrenheit = (float)$request->input('fahrenheit');
+        return ($fahrenheit - 32) * 5 / 9;
+    }
+
+    // Exercício 08
+    public function mostrarEx08()
+    {
+        return view("ex08");
+    }
+
+    public function calcularEx08(Request $request)
+    {
+        $largura = (float)$request->input('largura');
+        $altura = (float)$request->input('altura');
+        return $largura * $altura;
+    }
 }
