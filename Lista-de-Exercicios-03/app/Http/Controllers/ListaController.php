@@ -200,4 +200,32 @@ class ListaController extends Controller
 
         return $quilometros * 0.621371;
     }
+
+    // Exercício 15
+    public function mostrarEx15()
+    {
+        return view("ex15");
+    }
+
+    public function calcularEx15(Request $request)
+    {
+        $peso = (float)$request->input("peso");
+        $altura = (float)$request->input("altura");
+
+        return $peso / ($altura * $altura);
+    }
+
+    // Exercício 16
+    public function mostrarEx16()
+    {
+        return view("ex16");
+    }
+
+    public function calcularEx16(Request $request)
+    {
+        $preco = (float)$request->input("preco");
+        $desconto = (float)$request->input("desconto");
+
+        return $preco - ($preco * $desconto / 100);
+    }
 }
