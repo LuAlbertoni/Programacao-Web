@@ -31,4 +31,33 @@ class ListaController extends Controller
         $valor2 = (int)$request->input('val02');
         return $valor1 - $valor2;
     }
+
+    // Exercício 03
+    public function mostrarEx03()
+    {
+        return view("ex03");
+    }
+
+    public function calcularEx03(Request $request)
+    {
+        $valor1 = (int)$request->input('val01');
+        $valor2 = (int)$request->input('val02');
+        return $valor1 * $valor2;
+    }
+
+    // Exercício 04
+    public function mostrarEx04()
+    {
+        return view("ex04");
+    }
+
+    public function calcularEx04(Request $request)
+    {
+        $valor1 = (int)$request->input('val01');
+        $valor2 = (int)$request->input('val02');
+        if ($valor2 == 0) {
+            return "Divisão por zero!";
+        }
+        return $valor1 / $valor2;
+    }
 }

@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir dois números. O programadeve subtrair o
-    segundo número do primeiro e exibir o resultado.</p>
+    <p>Crie um formulário que permita ao usuário inserir dois números. O programa deve subtrair o segundo número do primeiro e exibir o resultado.</p>
+
     <form action="/respostaEx02" method="POST">
         @CSRF
         <input type="number" name="val01" />
