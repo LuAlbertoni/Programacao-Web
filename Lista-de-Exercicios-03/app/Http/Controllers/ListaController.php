@@ -16,7 +16,7 @@ class ListaController extends Controller
     {
         $valor1 = (int)$request->input("val01");
         $valor2 = (int)$request->input("val02");
-        
+
         return $valor1 + $valor2;
     }
 
@@ -173,5 +173,31 @@ class ListaController extends Controller
         $expoente = (float)$request->input("expoente");
 
         return $base ** $expoente;
+    }
+
+    // Exercício 13
+    public function mostrarEx13()
+    {
+        return view("ex13");
+    }
+
+    public function calcularEx13(Request $request)
+    {
+        $metros = (float)$request->input("metros");
+
+        return $metros * 100;
+    }
+
+    // Exercício 14
+    public function mostrarEx14()
+    {
+        return view("ex14");
+    }
+
+    public function calcularEx14(Request $request)
+    {
+        $quilometros = (float)$request->input("quilometros");
+
+        return $quilometros * 0.621371;
     }
 }
