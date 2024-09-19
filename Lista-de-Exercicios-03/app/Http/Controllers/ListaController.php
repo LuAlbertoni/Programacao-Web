@@ -228,4 +228,34 @@ class ListaController extends Controller
 
         return $preco - ($preco * $desconto / 100);
     }
+
+    // Exercício 17
+    public function mostrarEx17()
+    {
+        return view("ex17");
+    }
+
+    public function calcularEx17(Request $request)
+    {
+        $capital = (float)$request->input("capital");
+        $taxa = (float)$request->input("taxa");
+        $periodo = (float)$request->input("periodo");
+
+        return $capital * $taxa * $periodo;
+    }
+
+    // Exercício 18
+    public function mostrarEx18()
+    {
+        return view("ex18");
+    }
+
+    public function calcularEx18(Request $request)
+    {
+        $capital = (float)$request->input("capital");
+        $taxa = (float)$request->input("taxa");
+        $periodo = (float)$request->input("periodo");
+
+        return $capital * (1 + $taxa) ** $periodo;
+    }
 }
