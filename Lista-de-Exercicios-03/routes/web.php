@@ -57,3 +57,11 @@ Route::post("/respostaEx09", [ListaController::class, "calcularEx09"]);
 // Exercício 10
 Route::get("/ex10", [ListaController::class, "mostrarEx10"]);
 Route::post("/respostaEx10", [ListaController::class, "calcularEx10"]);
+
+// Exercício 11
+Route::get("/ex11", [ListaController::class, "mostrarEx11"]);
+Route::post("/respostaEx11", [ListaController::class, "calcularEx11"]);
+
+// Exercício 12
+Route::get("/ex12", [ListaController::class, "mostrarEx12"]);
+Route::post("/respostaEx12", [ListaController::class, "calcularEx12"]);
