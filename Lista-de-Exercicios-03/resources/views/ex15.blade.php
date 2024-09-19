@@ -12,7 +12,10 @@
 
     <form action="/respostaEx15" method="POST">
         @CSRF
+        <label for="peso">Peso (kg)</label>
         <input type="number" name="peso" />
+
+        <label for="altura">Altura (m)</label>
         <input type="number" name="altura" />
 
         <button type="submit">Calcular</button>

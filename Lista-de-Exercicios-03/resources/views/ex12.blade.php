@@ -12,7 +12,10 @@
 
     <form action="/respostaEx12" method="POST">
         @CSRF
+        <label for="base">Base</label>
         <input type="number" name="base" />
+
+        <label for="expoente">Expoente</label>
         <input type="number" name="expoente" />
 
         <button type="submit">Calcular</button>

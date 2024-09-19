@@ -12,6 +12,7 @@
 
     <form action="/respostaEx06" method="POST">
         @CSRF
+        <label for="celsius">Temperatura em Celsius</label>
         <input type="number" name="celsius" />
 
         <button type="submit">Calcular</button>

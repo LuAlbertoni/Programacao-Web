@@ -12,8 +12,13 @@
 
     <form action="/respostaEx18" method="POST">
         @CSRF
+        <label for="capital">Capital</label>
         <input type="number" name="capital" />
+
+        <label for="taxa">Taxa</label>
         <input type="number" name="taxa" />
+
+        <label for="periodo">Período</label>
         <input type="number" name="periodo" />
 
         <button type="submit">Calcular</button>

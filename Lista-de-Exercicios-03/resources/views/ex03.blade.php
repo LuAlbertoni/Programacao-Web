@@ -12,9 +12,12 @@
 
     <form action="/respostaEx03" method="POST">
         @CSRF
+        <label for="val01">Valor 01</label>
         <input type="number" name="val01" />
+
+        <label for="val02">Valor 02</label>
         <input type="number" name="val02" />
-        
+
         <button type="submit">Calcular</button>
     </form>
 </body>

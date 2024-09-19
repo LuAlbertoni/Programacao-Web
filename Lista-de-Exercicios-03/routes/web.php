@@ -15,7 +15,7 @@ use App\Http\Controllers\ListaController;
 */
 
 Route::get("/", function () {
-    return view("welcome");
+    return view("index");
 });
 
 // Exercício 01
@@ -89,3 +89,11 @@ Route::post("/respostaEx17", [ListaController::class, "calcularEx17"]);
 // Exercício 18
 Route::get("/ex18", [ListaController::class, "mostrarEx18"]);
 Route::post("/respostaEx18", [ListaController::class, "calcularEx18"]);
+
+// Exercício 19
+Route::get("/ex19", [ListaController::class, "mostrarEx19"]);
+Route::post("/respostaEx19", [ListaController::class, "calcularEx19"]);
+
+// Exercício 20
+Route::get("/ex20", [ListaController::class, "mostrarEx20"]);
+Route::post("/respostaEx20", [ListaController::class, "calcularEx20"]);

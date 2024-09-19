@@ -12,7 +12,10 @@
 
     <form action="/respostaEx16" method="POST">
         @CSRF
+        <label for="preco">Preço</label>
         <input type="number" name="preco" />
+
+        <label for="desconto">Desconto (%)</label>
         <input type="number" name="desconto" />
 
         <button type="submit">Calcular</button>

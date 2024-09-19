@@ -258,4 +258,35 @@ class ListaController extends Controller
 
         return $capital * (1 + $taxa) ** $periodo;
     }
+
+    // Exercício 19
+    public function mostrarEx19()
+    {
+        return view("ex19");
+    }
+
+    public function calcularEx19(Request $request)
+    {
+        $dias = (int)$request->input("dias");
+
+        $horas = $dias * 24;
+        $minutos = $horas * 60;
+        $segundos = $minutos * 60;
+
+        return "Horas: $horas, Minutos: $minutos, Segundos: $segundos";
+    }
+
+    // Exercício 20
+    public function mostrarEx20()
+    {
+        return view("ex20");
+    }
+
+    public function calcularEx20(Request $request)
+    {
+        $distancia = (float)$request->input("distancia");
+        $tempo = (float)$request->input("tempo");
+
+        return $distancia / $tempo;
+    }
 }

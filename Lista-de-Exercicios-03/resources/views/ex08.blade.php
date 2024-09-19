@@ -12,7 +12,10 @@
 
     <form action="/respostaEx08" method="POST">
         @CSRF
+        <label for="largura">Largura</label>
         <input type="number" name="largura" />
+
+        <label for="altura">Altura</label>
         <input type="number" name="altura" />
 
         <button type="submit">Calcular</button>

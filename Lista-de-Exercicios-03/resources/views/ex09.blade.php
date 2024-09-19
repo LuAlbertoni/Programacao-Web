@@ -12,6 +12,7 @@
 
     <form action="/respostaEx09" method="POST">
         @CSRF
+        <label for="raio">Raio</label>
         <input type="number" name="raio" />
 
         <button type="submit">Calcular</button>
