@@ -14,8 +14,8 @@ class ListaController extends Controller
 
     public function calcularEx01(Request $request)
     {
-        $valor1 = (int)$request->input('val01');
-        $valor2 = (int)$request->input('val02');
+        $valor1 = (int)$request->input("val01");
+        $valor2 = (int)$request->input("val02");
         return $valor1 + $valor2;
     }
 
@@ -27,8 +27,8 @@ class ListaController extends Controller
 
     public function calcularEx02(Request $request)
     {
-        $valor1 = (int)$request->input('val01');
-        $valor2 = (int)$request->input('val02');
+        $valor1 = (int)$request->input("val01");
+        $valor2 = (int)$request->input("val02");
         return $valor1 - $valor2;
     }
 
@@ -40,8 +40,8 @@ class ListaController extends Controller
 
     public function calcularEx03(Request $request)
     {
-        $valor1 = (int)$request->input('val01');
-        $valor2 = (int)$request->input('val02');
+        $valor1 = (int)$request->input("val01");
+        $valor2 = (int)$request->input("val02");
         return $valor1 * $valor2;
     }
 
@@ -53,8 +53,8 @@ class ListaController extends Controller
 
     public function calcularEx04(Request $request)
     {
-        $valor1 = (int)$request->input('val01');
-        $valor2 = (int)$request->input('val02');
+        $valor1 = (int)$request->input("val01");
+        $valor2 = (int)$request->input("val02");
         if ($valor2 == 0) {
             return "Divisão por zero!";
         }
@@ -69,9 +69,9 @@ class ListaController extends Controller
 
     public function calcularEx05(Request $request)
     {
-        $nota1 = (float)$request->input('nota01');
-        $nota2 = (float)$request->input('nota02');
-        $nota3 = (float)$request->input('nota03');
+        $nota1 = (float)$request->input("nota01");
+        $nota2 = (float)$request->input("nota02");
+        $nota3 = (float)$request->input("nota03");
         return ($nota1 + $nota2 + $nota3) / 3;
     }
 
@@ -83,7 +83,7 @@ class ListaController extends Controller
 
     public function calcularEx06(Request $request)
     {
-        $celsius = (float)$request->input('celsius');
+        $celsius = (float)$request->input("celsius");
         return ($celsius * 9 / 5) + 32;
     }
 
@@ -95,7 +95,7 @@ class ListaController extends Controller
 
     public function calcularEx07(Request $request)
     {
-        $fahrenheit = (float)$request->input('fahrenheit');
+        $fahrenheit = (float)$request->input("fahrenheit");
         return ($fahrenheit - 32) * 5 / 9;
     }
 
@@ -107,8 +107,33 @@ class ListaController extends Controller
 
     public function calcularEx08(Request $request)
     {
-        $largura = (float)$request->input('largura');
-        $altura = (float)$request->input('altura');
+        $largura = (float)$request->input("largura");
+        $altura = (float)$request->input("altura");
         return $largura * $altura;
+    }
+
+    // Exercício 09
+    public function mostrarEx09()
+    {
+        return view("ex09");
+    }
+
+    public function calcularEx09(Request $request)
+    {
+        $raio = (float)$request->input("raio");
+        return pi() * $raio * $raio;
+    }
+
+    // Exercício 10
+    public function mostrarEx10()
+    {
+        return view("ex10");
+    }
+
+    public function calcularEx10(Request $request)
+    {
+        $largura = (float)$request->input("largura");
+        $altura = (float)$request->input("altura");
+        return 2 * ($largura + $altura);
     }
 }

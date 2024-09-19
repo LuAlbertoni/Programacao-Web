@@ -14,6 +14,7 @@
         @CSRF
         <input type="number" name="val01" />
         <input type="number" name="val02" />
+        
         <button type="submit">Calcular</button>
     </form>
 </body>

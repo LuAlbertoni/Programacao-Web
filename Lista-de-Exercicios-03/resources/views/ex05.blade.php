@@ -15,6 +15,7 @@
         <input type="number" name="nota01" />
         <input type="number" name="nota02" />
         <input type="number" name="nota03" />
+        
         <button type="submit">Calcular</button>
     </form>
 </body>

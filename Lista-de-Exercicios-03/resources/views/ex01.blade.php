@@ -9,11 +9,12 @@
 
 <body>
     <p>Crie um formulário que permita ao usuário inserir dois números. O programa deve somar esses números e exibir o resultado.</p>
-    
+
     <form action="/respostaEx01" method="POST">
         @CSRF
         <input type="number" name="val01" />
         <input type="number" name="val02" />
+
         <button type="submit">Calcular</button>
     </form>
 </body>

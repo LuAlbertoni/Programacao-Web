@@ -13,6 +13,7 @@
     <form action="/respostaEx06" method="POST">
         @CSRF
         <input type="number" name="celsius" />
+
         <button type="submit">Calcular</button>
     </form>
 </body>
