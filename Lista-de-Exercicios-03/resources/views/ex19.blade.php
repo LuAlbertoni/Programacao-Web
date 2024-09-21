@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 19</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir um valor em dias. O programa deve converter esse valor para horas, minutos e segundos e exibir o resultado.</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Conversão de Dias</h1>
+                <p class="text-center">Insira um valor em dias para converter para horas, minutos e segundos.</p>
 
-    <form action="/respostaEx19" method="POST">
-        @CSRF
-        <label for="dias">Dias</label>
-        <input type="number" name="dias" />
+                <form action="/respostaEx19" method="POST">
+                    @CSRF
+                    <div class="mb-3">
+                        <label for="dias" class="form-label">Dias</label>
+                        <input type="number" name="dias" class="form-control" placeholder="Insira o número de dias" required>
+                    </div>
 
-        <button type="submit">Calcular</button>
-    </form>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 13</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir um valor em metros. O programa deve converter esse valor para centímetros e exibir o resultado.</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Conversão de Medidas</h1>
+                <p class="text-center">Insira um valor em metros para converter para centímetros.</p>
 
-    <form action="/respostaEx13" method="POST">
-        @CSRF
-        <label for="metros">Metros</label>
-        <input type="number" name="metros" />
+                <form action="/respostaEx13" method="POST">
+                    @CSRF
+                    <div class="mb-3">
+                        <label for="metros" class="form-label">Metros</label>
+                        <input type="number" name="metros" class="form-control" placeholder="Insira o valor em metros" required>
+                    </div>
 
-        <button type="submit">Converter</button>
-    </form>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Converter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

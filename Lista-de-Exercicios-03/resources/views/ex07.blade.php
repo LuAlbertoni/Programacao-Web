@@ -5,18 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 07</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir uma temperatura em Fahrenheit. O programa deve converter essa temperatura para Celsius e exibir o resultado.</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Conversão de Temperatura</h1>
+                <p class="text-center">Insira uma temperatura em Fahrenheit para converter para Celsius.</p>
 
-    <form action="/respostaEx07" method="POST">
-        @CSRF
-        <label for="fahrenheit">Temperatura em Fahrenheit</label>
-        <input type="number" name="fahrenheit" />
+                <form action="/respostaEx07" method="POST">
+                    @CSRF
+                    <div class="mb-3">
+                        <label for="fahrenheit" class="form-label">Temperatura em Fahrenheit</label>
+                        <input type="number" name="fahrenheit" class="form-control" placeholder="Insira a temperatura" required>
+                    </div>
 
-        <button type="submit">Calcular</button>
-    </form>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

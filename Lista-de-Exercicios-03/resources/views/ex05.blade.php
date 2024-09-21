@@ -5,24 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 05</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <p>Crie um formulário que permita ao usuário inserir três notas. O programa deve calcular a média das notas e exibir o resultado</p>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Cálculo da Média</h1>
+                <p class="text-center">Insira três notas para calcular a média.</p>
 
-    <form action="/respostaEx05" method="POST">
-        @CSRF
-        <label for="nota01">Nota 01</label>
-        <input type="number" name="nota01" />
+                <form action="/respostaEx05" method="POST">
+                    @CSRF
+                    <div class="mb-3">
+                        <label for="nota01" class="form-label">Nota 01</label>
+                        <input type="number" name="nota01" class="form-control" placeholder="Insira a primeira nota" required>
+                    </div>
 
-        <label for="nota02">Nota 02</label>
-        <input type="number" name="nota02" />
+                    <div class="mb-3">
+                        <label for="nota02" class="form-label">Nota 02</label>
+                        <input type="number" name="nota02" class="form-control" placeholder="Insira a segunda nota" required>
+                    </div>
 
-        <label for="nota03">Nota 03</label>
-        <input type="number" name="nota03" />
+                    <div class="mb-3">
+                        <label for="nota03" class="form-label">Nota 03</label>
+                        <input type="number" name="nota03" class="form-control" placeholder="Insira a terceira nota" required>
+                    </div>
 
-        <button type="submit">Calcular</button>
-    </form>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
