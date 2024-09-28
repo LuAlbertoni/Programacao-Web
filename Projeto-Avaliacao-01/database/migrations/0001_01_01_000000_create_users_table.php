@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->enum('tipo', ['aluno', 'empresa', 'secretaria'])->default('aluno');
+            $table->text('biografia')->nullable();
+            $table->string('imagem_perfil')->nullable();
+            $table->enum('status', ['ativo', 'inativo'])->default('ativo');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
