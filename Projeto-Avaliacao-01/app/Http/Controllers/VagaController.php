@@ -5,21 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Vaga;
 use App\Models\Cidade;
-use App\Models\PerfilEmpresa;
 
 class VagaController extends Controller
 {
     public function index()
     {
-        $vagas = Vaga::with('empresa.usuario', 'cidade')->get();
+        $vagas = Vaga::all();
         return view('vagas.index', compact('vagas'));
     }
 
     public function create()
     {
         $cidades = Cidade::all();
-        $empresas = PerfilEmpresa::with('usuario')->get();
-        return view('vagas.create', compact('cidades', 'empresas'));
+        return view('vagas.create', compact('cidades'));
     }
 
     public function store(Request $request)

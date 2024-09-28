@@ -17,11 +17,6 @@ class User extends Authenticatable
      */
     protected $fillable = ['name', 'email', 'password', 'tipo', 'biografia', 'imagem_perfil', 'status'];
 
-    public function perfilEmpresa()
-    {
-        return $this->hasOne(PerfilEmpresa::class);
-    }
-
     /**
      * The attributes that should be hidden for serialization.
      *

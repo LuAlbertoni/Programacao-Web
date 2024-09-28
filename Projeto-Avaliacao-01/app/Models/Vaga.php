@@ -13,11 +13,6 @@ class Vaga extends Model
         'prazo_candidatura' => 'date',
     ];
 
-    public function empresa()
-    {
-        return $this->belongsTo(PerfilEmpresa::class);
-    }
-
     public function cidade()
     {
         return $this->belongsTo(Cidade::class);
