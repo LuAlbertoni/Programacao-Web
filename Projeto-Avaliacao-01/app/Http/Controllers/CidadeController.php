@@ -28,4 +28,30 @@ class CidadeController extends Controller
 
         return redirect()->route('cidades.create')->with('success', 'Cidade cadastrada com sucesso!');
     }
+
+    public function destroy($id)
+    {
+        $cidade = Cidade::findOrFail($id);
+        $cidade->delete();
+
+        return redirect()->route('cidades.index')->with('success', 'Cidade apagada com sucesso!');
+    }
+
+    public function edit($id)
+    {
+        $cidade = Cidade::findOrFail($id);
+        return view('cidades.create', compact('cidade'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nome' => 'required|string|max:255',
+        ]);
+
+        $cidade = Cidade::findOrFail($id);
+        $cidade->update($request->all());
+
+        return redirect()->route('cidades.index')->with('success', 'Cidade atualizada com sucesso!');
+    }
 }

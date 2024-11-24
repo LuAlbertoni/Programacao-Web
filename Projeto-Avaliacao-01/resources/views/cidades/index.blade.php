@@ -24,8 +24,12 @@
                     <td>{{ $cidade->id }}</td>
                     <td>{{ $cidade->nome }}</td>
                     <td>
-                        <button class="btn btn-warning btn-sm">Editar</button>
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esta cidade?')">Excluir</button>
+                        <a href="{{ route('cidades.edit', $cidade->id) }}" class="btn btn-warning btn-sm">Editar</a>
+                        <form action="{{ route('cidades.destroy', $cidade->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir esta cidade?')">Excluir</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

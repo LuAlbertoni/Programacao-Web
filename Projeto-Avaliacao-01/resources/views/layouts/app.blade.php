@@ -126,6 +126,16 @@
                         <a class="dropdown-item" href="{{ url('/cidades') }}">Listar Cidades</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/relatorios') }}">
+                        <i class="fas fa-file-alt"></i> Relatórios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('eventos.index') }}">
+                        <i class="fas fa-calendar-alt"></i> Eventos
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -179,6 +189,15 @@
                                     </li>
                                 </ul>
                             </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/relatorios') }}">
+                                <i class="fas fa-file-alt"></i> Relatórios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('eventos.index') }}">
+                                <i class="fas fa-calendar-alt"></i> Eventos
+                            </a>
                         </li>
                     </ul>
                     <div class="logout-button">

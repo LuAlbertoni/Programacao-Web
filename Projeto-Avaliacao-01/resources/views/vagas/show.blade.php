@@ -4,7 +4,7 @@
     <div class="container mt-4">
         <h1>{{ $vaga->titulo }}</h1>
         <span class="{{ $vaga->status === 'aberta' ? 'text-success' : 'text-danger' }}">
-            {{ $vaga->status === 'aberta' ? 'Aberta até ' . $vaga->prazo_candidatura->format('d/m/Y') : 'Encerrada' }}
+            {{ $vaga->status === 'aberta' ? 'Aberta até ' . \Carbon\Carbon::parse($vaga->prazo_candidatura)->format('d/m/Y') : 'Encerrada' }}
         </span>
 
         <div class="card mt-4">
@@ -20,8 +20,16 @@
                     <li class="list-group-item"><strong>Requisitos:</strong> {{ $vaga->requisitos }}</li>
                 </ul>
 
-                <div class="mt-3">
-                    <a href="{{ route('vagas.index') }}" class="btn btn-primary">Voltar para a lista de vagas</a>
+                <div class="mt-4 d-flex justify-content-between">
+                    <a href="{{ route('vagas.index') }}" class="btn btn-primary">Voltar para a lista</a>
+                    <div>
+                        <a href="{{ route('vagas.edit', $vaga->id) }}" class="btn btn-warning">Editar</a>
+                        <form action="{{ route('vagas.destroy', $vaga->id) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Tem certeza que deseja excluir esta vaga?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

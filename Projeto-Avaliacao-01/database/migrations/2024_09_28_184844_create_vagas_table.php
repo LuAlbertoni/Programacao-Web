@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('vagas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('cidade_id')->constrained('cidades');
+            $table->foreignId('usuario_id')->constrained('users');
             $table->string('titulo');
             $table->text('descricao');
             $table->text('requisitos')->nullable();
             $table->decimal('salario', 10, 2)->nullable();
-            $table->date('data_postagem')->default(now());
             $table->date('prazo_candidatura')->nullable();
             $table->enum('status', ['aberta', 'fechada'])->default('aberta');
             $table->integer('total_cliques')->default(0);
